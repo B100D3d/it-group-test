@@ -1,0 +1,41 @@
+.fade-left-slide-enter
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  transform: translateX(100%)
+
+.fade-left-slide-enter-active
+  transition: transform 1000ms, opacity 1000ms
+  opacity: 1
+  transform: translateY(0)
+
+.fade-left-slide-exit
+  opacity: 1
+  transform: translateY(0)
+
+.fade-left-slide-exit-active
+  transition: transform 1000ms, opacity 700ms
+  opacity: 0
+  transform: translateX(-100%)
+
+.fade-right-slide-enter
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  transform: translateX(-100%)
+
+.fade-right-slide-enter-active
+  transition: transform 1000ms, opacity 1000ms
+  opacity: 1
+  transform: translateY(0)
+
+.fade-right-slide-exit
+  opacity: 1
+  transform: translateY(0)
+
+.fade-right-slide-exit-active
+  transition: transform 1000ms, opacity 700ms
+  opacity: 0
+  transform: translateX(100%)
