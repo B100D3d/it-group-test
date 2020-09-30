@@ -1,0 +1,40 @@
+@import "../../styles/variables"
+
+
+.contentContainer
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start
+
+  .textContainer
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin-bottom: 20px
+
+    h1
+      span
+        font-family: "Merriweather", serif
+        color: var(--color-accent)
+        font-weight: 900
+
+    .aboutText
+      font-weight: 300
+      font-size: 1.2rem
+
+  .casesContainer
+    width: 100%
+
+  @media all and (min-width: $screen-md)
+    flex-direction: row
+
+    .textContainer
+      width: 40%
+      margin: 0
+
+    .casesContainer
+      width: 50%
+      margin-top: 20px

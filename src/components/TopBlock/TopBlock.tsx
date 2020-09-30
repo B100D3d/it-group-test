@@ -4,6 +4,8 @@ import Container from "components/Container/Container"
 import Slider from "components/Slider/Slider"
 import { range } from "utils"
 import StyledButton from "components/StyledButton/StyledButton"
+import classNames from "classnames"
+import Block from "components/Block/Block"
 
 const mockData = range(4).map((i) => ({
     key: i,
@@ -18,23 +20,21 @@ const mockData = range(4).map((i) => ({
 
 const TopBlock = () => {
     return (
-        <div id="#top-block" className={styles.topBlock}>
-            <Container>
-                <Slider>
-                    {mockData.map((item, i) => (
-                        <div key={item.key} className={styles.content}>
-                            {item.title}
-                            <StyledButton
-                                onClick={() => {}}
-                                className={styles.button}
-                            >
-                                {item.buttonText}
-                            </StyledButton>
-                        </div>
-                    ))}
-                </Slider>
-            </Container>
-        </div>
+        <Block id="top-block" className={styles.topBlock}>
+            <Slider interval={5000}>
+                {mockData.map((item, i) => (
+                    <div key={item.key} className={styles.content}>
+                        {item.title}
+                        <StyledButton
+                            onClick={() => {}}
+                            className={styles.button}
+                        >
+                            {item.buttonText}
+                        </StyledButton>
+                    </div>
+                ))}
+            </Slider>
+        </Block>
     )
 }
 

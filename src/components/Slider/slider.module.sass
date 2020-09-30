@@ -1,3 +1,5 @@
+@import "../../styles/variables"
+
 .slider
   width: 100%
   display: flex
@@ -16,6 +18,14 @@
     display: flex
     justify-content: space-between
     align-items: center
+
+    .pagination
+      flex: 1
+      margin-right: 10%
+
+      @media all and (min-width: $screen-smd)
+        flex: 0 0 150px
+        margin: 0
 
     .arrowsContainer
       display: flex

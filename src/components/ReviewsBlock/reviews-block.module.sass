@@ -1,0 +1,48 @@
+@import "../../styles/variables"
+
+.contentContainer
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+  .reviewContainer
+    width: 100%
+    background-color: #EBEBEB
+    padding: 2.5% 5%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+
+    @media all and (min-width: $screen-smd)
+      padding: 5% 10%
+
+    .review
+      font-weight: 300
+      font-size: 1.2rem
+      margin-bottom: 30px
+
+    .user
+      display: flex
+      align-items: center
+
+      img
+        margin-right: 30px
+
+      .userInfo
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+
+        .name
+          font-weight: 900
+          font-size: 1.3rem
+
+        .company
+          color: #4F4F4F
+          font-weight: 400
+          font-size: 1.2rem
+
+

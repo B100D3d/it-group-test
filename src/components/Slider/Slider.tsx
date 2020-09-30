@@ -13,12 +13,16 @@ interface SliderProps {
     animationNextClassNames?: string | CSSTransitionClassNames
     animationPrevClassNames?: string | CSSTransitionClassNames
     animationTimeout?: number
+    navigationColor?: string
+    navigationActiveColor?: string
 }
 
 const Slider: React.FunctionComponent<SliderProps> = ({
     children,
     interval,
     className,
+    navigationColor,
+    navigationActiveColor,
     animationNextClassNames = "fade-right-slide",
     animationPrevClassNames = "fade-left-slide",
     animationTimeout = 1000,
@@ -72,13 +76,26 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             </div>
             <div className={styles.navigation}>
                 <Pagination
+                    className={styles.pagination}
                     numOfPages={React.Children.count(children)}
                     activePage={index}
                     onClick={handleTo}
+                    backgroundColor={navigationColor}
+                    activeBackgroundColor={navigationActiveColor}
                 />
                 <div className={styles.arrowsContainer}>
-                    <Arrow direction="left" onClick={handlePrev} />
-                    <Arrow direction="right" onClick={handleNext} />
+                    <Arrow
+                        direction="left"
+                        onClick={handlePrev}
+                        backgroundColor={navigationColor}
+                        activeBackgroundColor={navigationActiveColor}
+                    />
+                    <Arrow
+                        direction="right"
+                        onClick={handleNext}
+                        backgroundColor={navigationColor}
+                        activeBackgroundColor={navigationActiveColor}
+                    />
                 </div>
             </div>
         </div>

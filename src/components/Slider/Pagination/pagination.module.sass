@@ -1,17 +1,14 @@
 .pagination
   display: flex
-  margin: 0 -30px
   justify-content: space-between
 
   .dot
     width: 10px
     height: 10px
-    background-color: white
-    opacity: 0.4
+    background-color: var(--back-color, rgba(255, 255, 255, 0.4))
     border-radius: 50%
     cursor: pointer
-    transition: opacity 0.5s linear
-    margin: 0 30px
+    transition: background-color 0.5s linear
 
     &--active
-      opacity: 1
+      background-color: var(--active-back-color, white)

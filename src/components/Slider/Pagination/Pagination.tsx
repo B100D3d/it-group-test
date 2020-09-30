@@ -8,6 +8,9 @@ type OnClick = (index: number) => void
 interface PaginationProps {
     numOfPages: number
     activePage: number
+    className?: string
+    backgroundColor?: string
+    activeBackgroundColor?: string
     onClick: OnClick
 }
 
@@ -15,14 +18,21 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({
     numOfPages,
     activePage,
     onClick,
+    backgroundColor,
+    activeBackgroundColor,
+    className,
 }) => (
-    <div className={styles.pagination}>
+    <div className={classNames(styles.pagination, className)}>
         {range(numOfPages).map((index) => (
             <div
                 key={index}
                 className={classNames(styles.dot, {
                     [styles["dot--active"]]: activePage === index,
                 })}
+                style={{
+                    "--back-color": backgroundColor,
+                    "--active-back-color": activeBackgroundColor,
+                }}
                 onClick={() => onClick(index)}
             />
         ))}
