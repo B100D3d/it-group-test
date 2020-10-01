@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./services.module.sass"
-import buhBackground from "assets/buh-background.png"
+import buhBackground from "assets/buh-background.webp"
 import { range } from "utils"
 
 const mockData = range(6).map((i) => ({
