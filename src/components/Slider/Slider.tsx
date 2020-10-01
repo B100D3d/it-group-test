@@ -23,8 +23,8 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     className,
     navigationColor,
     navigationActiveColor,
-    animationNextClassNames = "fade-right-slide",
-    animationPrevClassNames = "fade-left-slide",
+    animationNextClassNames = "fade-left-slide",
+    animationPrevClassNames = "fade-right-slide",
     animationTimeout = 1000,
 }) => {
     const [item, next, prev, to, index] = useSliderItem(
