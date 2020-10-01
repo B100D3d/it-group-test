@@ -22,7 +22,11 @@ const ReviewsBlock = () => (
         <div className={styles.contentContainer}>
             <BlockName name="Отзывы" />
             <BlockTitle>Ваши благодарности</BlockTitle>
-            <Slider navigationColor="#005FA33d" navigationActiveColor="#005FA3">
+            <Slider
+                interval={5000}
+                navigationColor="#005FA33d"
+                navigationActiveColor="#005FA3"
+            >
                 {mockData.map((item) => (
                     <div className={styles.reviewContainer} key={item.key}>
                         <span className={styles.review}>{item.review}</span>

@@ -1,0 +1,117 @@
+.burgerButton
+  cursor: pointer
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+
+  span
+    display: block
+    width: 100%
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3)
+    border-radius: 3px
+    height: 4px
+    background: var(--color-accent)
+    transition: all .3s
+    position: relative
+    transform-origin: 50% 50%
+
+
+  &.active span:nth-child(1)
+    animation: top ease .5s forwards
+
+
+  &.notActive span:nth-child(1)
+    animation: top-2 ease .5s forwards
+
+
+  &.active span:nth-child(2)
+    animation: scaled ease .5s forwards
+
+
+  &.notActive span:nth-child(2)
+    animation: scaled-2 ease .5s forwards
+
+
+  &.active span:nth-child(3)
+    animation: bottom ease .5s forwards
+
+
+  &.notActive span:nth-child(3)
+    animation: bottom-2 ease .5s forwards
+
+
+@keyframes top
+  0%
+    top: 0
+    transform: rotate(0)
+
+  50%
+    top: 50%
+    transform: translateY(-50%) rotate(0)
+
+  100%
+    top: 50%
+    transform: translateY(-50%) rotate(45deg)
+
+
+
+@keyframes top-2
+  0%
+    top: 50%
+    transform: translateY(-50%) rotate(45deg)
+
+  50%
+    top: 50%
+    transform: translateY(-50%) rotate(0deg)
+
+  100%
+    top: 0
+    transform: rotate(0deg)
+
+
+
+@keyframes bottom
+  0%
+    bottom: 0
+    transform: rotate(0)
+
+  50%
+    bottom: 50%
+    transform: translateY(50%) rotate(0)
+
+  100%
+    bottom: 50%
+    transform: translateY(50%) rotate(135deg)
+
+
+
+@keyframes bottom-2 
+  0%
+    bottom: 50%
+    transform: translateY(-50%) rotate(135deg)
+
+  50%
+    bottom: 50%
+    transform: translateY(-50%) rotate(0)
+
+  100%
+    bottom: 0
+    transform: rotate(0)
+
+
+
+@keyframes scaled 
+  50%, 100%
+    transform: scale(0)
+
+
+
+@keyframes scaled-2 
+  0%, 50%
+    transform: scale(0)
+
+  100%
+    transform: scale(1)
+
+

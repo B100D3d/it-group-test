@@ -1,0 +1,109 @@
+@import "../../styles/variables"
+
+.contactBlock
+  background: url("../../assets/top-block-back.png") no-repeat
+
+  *
+    color: white
+
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.8)
+
+  .contactsContainer
+    z-index: 1
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+
+    .contacts
+      width: 100%
+      margin-bottom: 30px
+
+      > h1
+        font-family: "Merriweather", serif
+        font-size: 2.5rem
+        margin-top: 0
+        font-weight: 900
+
+      > span
+        margin-top: 30px
+        font-weight: 300
+        font-size: 1rem
+
+      > div
+        width: 100%
+        display: flex
+        margin-top: 3rem
+
+        span
+          display: flex
+          align-items: center
+          margin-right: 30px
+          font-weight: 300
+          font-size: 1rem
+          img
+            margin-right: 10px
+
+    .feedback
+      width: 100%
+
+      form
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: 30px
+
+        .input
+          width: 48%
+
+        .textarea
+          margin-top: 3rem
+          width: 100%
+
+        .submitContainer
+          width: 100%
+          display: flex
+          justify-content: flex-end
+          margin-top: 20px
+
+          .submit
+            min-width: 220px
+
+
+    @media all and (min-width: $screen-md)
+      flex-direction: row
+      align-items: flex-start
+
+      .contacts
+        margin: 0
+        width: 40%
+
+        @media (max-width: $screen-ddc)
+          > div
+            margin-top: 30px
+            flex-direction: column
+            align-items: center
+
+            span
+              margin-bottom: 20px
+
+      .feedback
+        width: 50%
+
+
+    @media all and (min-width: $screen-ddc)
+      .contacts
+        width: 45%
+
+      .feedback
+        width: 45%
+
