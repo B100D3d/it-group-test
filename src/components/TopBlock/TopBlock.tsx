@@ -21,7 +21,7 @@ const mockData = range(4).map((i) => ({
 const TopBlock = () => {
     return (
         <Block id="top-block" className={styles.topBlock}>
-            <Slider interval={5000}>
+            <Slider className={styles.slider} interval={5000}>
                 {mockData.map((item, i) => (
                     <div key={item.key} className={styles.content}>
                         {item.title}
